@@ -10,26 +10,32 @@ import ItemCard from "./ItemCard";
 
 
 
-const url = "https://api.pexels.com/v1/search?query=laptop&per_page=6&page=1"
-const localeURL = "http://myjson.dit.upm.es/api/bins/phz"
+const url = "https://api.pexels.com/v1/search?query=products&per_page=6&page=1"
+// const localeURL = "http://myjson.dit.upm.es/api/bins/phz"
 
 const BuySection = ({addIncart}) => {
 
-    const [products,setProducts] = useState([])
+    const [products,setProducts] = useState([]);
 
+    useEffect(() => {
+        fetchPhotos();
+          }, []) // Dependecies 
+     
     const fetchPhotos = async () => {
-        const {data} = await axios.get(localeURL);
-        ;
+        const response= await axios.get(url, {
+                    headers:{
+                        Authorization : process.env.REACT_APP_API_KEY
+                    }
+                }) ;
 
-
-        const {photos} = data; 
+        const {photos} = response.data; 
         //  also can be written as const photos = data.photos
 
 
         const allProducts = photos.map(photo => ({
             smallImage:photo.src.medium,
             tinyImage:photo.src.tiny,
-            productName:random.word(),
+            productName:commerce.product(),
             productPrice:commerce.price(),
             id:datatype.uuid()
         }));
@@ -43,10 +49,7 @@ const BuySection = ({addIncart}) => {
        
 
 
- useEffect(() => {
-   fetchPhotos();
-     }, []) // Dependecies 
-
+ 
 
     
 
@@ -59,7 +62,7 @@ const BuySection = ({addIncart}) => {
 
             </h1>
             <Row>
-                {products.map(product =>(
+                {products && products.map(product =>(
                   <Col md={4} key={product.id}>
                        <ItemCard  product ={product} addIncart={addIncart} />
 

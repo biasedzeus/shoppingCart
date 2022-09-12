@@ -17,7 +17,7 @@ const Cart = ({ cartItem, removeItem, buyNow }) => {
     <Container className="cart-container" fluid>
       <h1 className="text-success yourcart">Cart</h1>
       <ListGroup>
-        {cartItem.map((item) => (
+        {cartItem && cartItem.map((item) => (
           <ListGroupItem className="listItem" key={item.id}>
             <div className="flex-container">
                 <div className="image-prodName">
