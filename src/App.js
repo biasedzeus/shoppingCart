@@ -21,7 +21,7 @@ function App() {
     
   });
 
-  console.log("ALREADY:",isAlreadyincart);
+  // console.log("ALREADY:",isAlreadyincart);
   if(isAlreadyincart !== -1){
     toast("Item already in the cart", {type:"error",position:'top-center'});
     return;

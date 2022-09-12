@@ -59,6 +59,7 @@ const Cart = ({ cartItem, removeItem, buyNow }) => {
         <div className="emptycard">
             <h4>Cart is Empty</h4>
             <h6>Add items to get started.</h6>
+            <h1>+</h1>
 
         </div>
         </div>
