@@ -2,7 +2,7 @@ import { useState , useEffect} from "react";
 import React
 from "react";   
 import axios from "axios";
-import { random,  commerce,datatype } from "faker";
+import { commerce,datatype } from "faker";
 import { Container,Row, Col } from "reactstrap";
 import ItemCard from "./ItemCard";
 
