@@ -1,3 +1,162 @@
-body{
+body {
   background-color: black;
+}
+
+.Navbar {
+  width: 100%;
+}
+
+.store-heading {
+  margin-top: 10px;
+  /* padding: 1rem; */
+  border-radius: 1rem;
+  background-color: wheat;
+  font-weight: 700;
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+}
+
+.cart-container {
+  background-color: white;
+  background-color: wheat;
+
+  margin-top: 10px;
+  border-radius: 1rem;
+  min-height: 99vh;
+  text-align: center;
+}
+.cart-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fit-content {
+  width: fit-content;
+}
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  max-height: 100px;
+}
+.image-prodName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.prodname-price {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 16px;
+}
+.productName {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.yourcart {
+  font-weight: 700;
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  width: 100%;
+}
+.cartimage {
+  border-radius: 5px;
+}
+.subtotal {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-around;
+  color: gray;
+  padding-top: 0.5rem;
+}
+
+.subtotal span {
+  font-weight: 700;
+  color: black;
+}
+.pay-btn {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.total {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  color: gray;
+}
+
+.total p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+}
+
+.total span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.emptycardcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  width: 100%;
+}
+
+.emptycard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.listItem {
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 1rem;
+}
+
+.usd {
+  font-size: 0.8rem !important;
+  color: gray !important;
+}
+
+/* Item Cart */
+
+.itemproductName {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.itemproductPrice {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.itemproductBuy {
+  width: 100%;
+}
+
+.remove-btn {
+ padding: 0 5px;
 }

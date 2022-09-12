@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ToastContainer, toast } from 'react-toastify';
 
 import "react-toastify/dist/ReactToastify.css"
-import BuySection from "./components/buySection";
+import BuySection from "./components/BuySection";
 
 import { Container,Row,Col } from "reactstrap";
 import Cart from './components/Cart';
@@ -23,16 +23,22 @@ function App() {
 
   console.log("ALREADY:",isAlreadyincart);
   if(isAlreadyincart !== -1){
-    toast("Item already in the cart", {type:"error"});
+    toast("Item already in the cart", {type:"error",position:'top-center'});
     return;
 
   }
-  console.log(" after toast ALREADY:",isAlreadyincart);
 
 
   setCartItem([...cartItem,item])
 
+   toast("Item added to cart",{
+    type:"success",
+    position: 'top-center',
+    style:{
+      textAlign:'center',
 
+    }
+  })
   }
 
   const buyNow = () => {

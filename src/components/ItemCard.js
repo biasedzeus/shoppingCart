@@ -11,15 +11,17 @@ const ItemCard = ({product , addIncart}) =>{
 
                 <CardImg 
                 top
-                height="250"
+                maxheight="250"
                 width="100%"
                 src={product.smallImage}
                 className=""/>
-                <CardBody className = "text-center">
+                <CardBody className = "text-center itemproductName">
                 <CardTitle>{product.productName}</CardTitle>
-                <CardText className = "secondary"
+                <CardText className = "secondary itemproductPrice"
                 >Price : $ {product.productPrice}</CardText>
-                <Button color = "success"
+                <Button
+                className="itemproductBuy"
+                color = "success"
                 onClick = {()=>addIncart(product)}>
                     Buy Now
                 </Button>
