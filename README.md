@@ -1,4 +1,7 @@
 # Shoping Cart using FakerJS and Pexels
+
+https://shoppingcartfaker.netlify.app/
+
 ## Features
  - Add Items to the cart
  - Items can only be added once
