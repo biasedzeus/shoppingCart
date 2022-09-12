@@ -29,6 +29,7 @@ const Cart = ({ cartItem, removeItem, buyNow }) => {
               </div>
                 </div>
                 <p className="price">{item.productPrice}$</p>
+                <Button className="remove-btn" onClick={() =>removeItem(item)}>-</Button>
             </div>
           </ListGroupItem>
         ))}
@@ -51,15 +52,7 @@ const Cart = ({ cartItem, removeItem, buyNow }) => {
             <Button className="pay-btn" color="success" onClick={buyNow}>
               PAY HERE
             </Button>
-          {/* <CardHeader>Grand Total :</CardHeader>
-          <CardBody>
-            your amount for {cartItem.length} product is {amount}
-          </CardBody>
-          <CardFooter>
-            <Button color="success" onClick={buyNow}>
-              PAY HERE
-            </Button>
-          </CardFooter> */}
+        
         </Card>
       ) : (
         <div className="emptycardcontainer">

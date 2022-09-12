@@ -9,7 +9,6 @@ import ItemCard from "./ItemCard";
 
 
 
-const api_key = "Insert Your Key Here"
 
 const url = "https://api.pexels.com/v1/search?query=laptop&per_page=6&page=1"
 const localeURL = "http://myjson.dit.upm.es/api/bins/phz"
@@ -17,13 +16,6 @@ const localeURL = "http://myjson.dit.upm.es/api/bins/phz"
 const BuySection = ({addIncart}) => {
 
     const [products,setProducts] = useState([])
-    // const fetchPhotos = async () => {
-    //     const response = await axios.get(url, {
-    //         header:{
-    //             Authorization:api_key
-    //         }
-    //     })
-    // }
 
     const fetchPhotos = async () => {
         const {data} = await axios.get(localeURL);
@@ -59,10 +51,10 @@ const BuySection = ({addIncart}) => {
     
 
     return(
-        <Container fluid >
-            <h1 className ="text-success text-center">
+        <Container fluid  className="Navbar">
+            <h1 className ="text-success text-center store-heading">
 
-                Buy PAGE
+                Store
 
 
             </h1>
